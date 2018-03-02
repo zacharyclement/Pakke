@@ -27,9 +27,9 @@ themeteorchef:bert
 accounts-base
 accounts-password
 session
-meteortoys:allthings
 cfs:standard-packages
 cfs:gridfs
 easy:search
 easysearch:elasticsearch
 easysearch:autosuggest
+meteortoys:allthings

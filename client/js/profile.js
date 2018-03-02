@@ -1,7 +1,6 @@
 Template.profile.rendered = function() {
 	$("#profile-link").addClass('selected');
-	$("#jokes-link").removeClass('selected');
-	$("#rankings-link").removeClass('selected');
+	$("#events-link").removeClass('selected');
 	$("#search-link").removeClass('selected');
 	$("#login-link").removeClass('selected');
 
@@ -26,23 +25,19 @@ Template.profile.helpers({
 		}
 	}, 
 
-	userJokes: function() {
+	userEvents: function() {
 		var username = Meteor.user().username;
 		var userId = Meteor.userId();
-		var userJokes = Jokes.find({userId: userId}, {sort: {createdAt: -1}});
-		return userJokes;
+		var userEvents = Events.find({userId: userId}, {sort: {createdAt: -1}});
+		return userEvents;
 	},
 
-	userLaughScore: function() {
-		return Meteor.user().profile.laughScore;
+	userAddress: function() {
+		return Meteor.user().profile.address;
 	},
 
-	userFrownScore: function() {
-		return Meteor.user().profile.frownScore;
-	},
-
-	userPukeScore: function() {
-		return Meteor.user().profile.pukeScore;
+	userHost: function() {
+		return Meteor.user().profile.host;
 	},
 
 	UserImages: function() {
@@ -55,9 +50,10 @@ Template.profile.helpers({
 });
 
 Template.profile.events({
-	"click #delete-joke": function() {
-		Meteor.call("removeJoke", this._id);
-		Bert.alert("Your Joke Was Deleted", "success", "growl-top-right");
+	"click #delete-event": function() {
+		console.log(this._id)
+		Meteor.call("removeEvent", this._id);
+		Bert.alert("Your Event Was Deleted", "success", "growl-top-right");
 	},
 
 	"submit .edit-profile": function(event) {

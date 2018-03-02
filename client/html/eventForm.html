@@ -1,0 +1,30 @@
+<template name="eventForm">
+	{{#if currentUser}}
+	<!-- Event Form-->
+	<div id="eventForm-wrap">
+		<center>
+			<form class="event-post">
+				<h2 class="eventForm-heading">Post an Event</h2>
+				<label for="eventName" class="sr-only">Event Name</label>
+				<input type="text" name="eventName" id="eventName" class="form-control" placeholder="Event Name" maxlength="40">
+				<label for="eventAddress" class="sr-only">Event Address</label>
+				<input type="text" name="eventAddress" id="eventAddress" class="form-control" placeholder="Event Address" maxlength="140">
+
+				<button class="btn btn-lg btn-success btn-block" type="submit">Post Event</button>
+			</form>
+		</center>
+	</div>
+	<!-- End Event Form-->
+	{{else}}
+	<!-- Event Form-->
+	<div id="eventForm-wrap">
+		<center>
+			<form class="event-post">
+				<h2 class="form-signin-heading">Log In To Post an Event</h2>
+				<a href="/login" class="btn btn-md btn-primary" id="login-redir">Login</a>
+			</form>
+		</center>
+	</div>
+	<!-- End Event Form-->
+	{{/if}}
+</template>

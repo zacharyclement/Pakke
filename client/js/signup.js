@@ -20,8 +20,8 @@ Template.signup.events({
 				email: email,
 				password: password,
 				profile: {
-					laughScore: 0,
-					frownScore: 0,
+					address: 0,
+					host: false,
 					pukeScore: 0,
 					voted: [],
 				}
@@ -30,7 +30,7 @@ Template.signup.events({
 					Bert.alert(err.reason, "danger", "growl-top-right");
 				} else {
 					Bert.alert("Account Created! You Are Now Logged In", "success", "growl-top-right");
-					Router.go("/jokes");
+					Router.go("/events");
 
 				}
 			});
