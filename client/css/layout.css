@@ -1,15 +1,12 @@
 html,
 body {
-  overflow-x: hidden; /* Prevent scroll on narrow devices */
   box-sizing: border-box;
 }
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background-image:white;
 }
 
 .main-content {
-  background-color: white;
   padding: 40px 20px;
 }

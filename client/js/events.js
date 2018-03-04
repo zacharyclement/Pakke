@@ -13,9 +13,6 @@ Template.events.helpers({
 });
 
 
-// still working on this
-// user is attending event
-
 Template.events.events({
 	"click #submit-attendee": function () {
 		console.log('submit attendee')

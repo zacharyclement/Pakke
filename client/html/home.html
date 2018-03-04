@@ -1,6 +1,7 @@
 <template name="events">
+	{{#if currentUser}}
 	<div class="event-map-wrapper">
-		{{#if currentUser}}
+
 
 		<div class='map-container'>
 			{{>map}}
@@ -11,7 +12,7 @@
 		<!-- Event -->
 		<div class="event">
 			<h1>{{eventName}}</h1>
-			<h3>{{eventAddress}}</h3>			
+			<h3>{{eventAddress}}</h3>
 			<p>Posted On: {{date}}</p>
 			<p>Host: {{eventHostUserName}}</p>
 			<button class="btn btn-lg btn-success" id="submit-attendee" type="submit">Attend Event</button>
@@ -22,17 +23,17 @@
 		<div class="event">
 			<h1>no events to display</h1>
 		</div>
-		{{/each}} {{else}}
-		
-		<!-- Main landing page if not signed in -->
-		<div class='front-page'>
-			<h1>Pakke</h1>
-			<h3>Always Different. Never the SAme</h3>
-			<button>
-				<a class="" href="/login" id="login-link">Find Events Near You!</a>
-			</button>
-		</div>
-		{{/if}}
+		{{/each}}
 	</div>
+
+	{{else}}
+
+	<!-- Main landing page if not signed in -->
+
+
+	{{/if}} {{>landingPage}}
+
+
+
 
 </template>
