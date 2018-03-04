@@ -6,10 +6,11 @@
 			<ul>
 				{{#if currentUser}}
 				<li><a href="/profile" id="profile-link">Profile</a></li>
+				<li><a href="/search" id="search-link">Search</a></li>
 				{{else}}
 				{{/if}}
 				<li><a href="/events" id="events-link">Events</a></li>
-				<li><a href="/search" id="search-link">Search</a></li>
+				
 				{{#if currentUser}}
 				<li><a class="logout" href="/" id="logout-link">Logout</a></li>
 				{{else}}
