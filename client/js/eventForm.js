@@ -13,7 +13,7 @@ Template.eventForm.events({
 		if (isNotEmpty(eventName) &&
 			isNotEmpty(eventAddress)) {
 
-			Meteor.call('addEvents', eventName, eventAddress);
+			Meteor.call('createEvent', eventName, eventAddress);
 
 			event.target.eventName.value = "";
 			event.target.eventAddress.value = "";

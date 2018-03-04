@@ -8,7 +8,7 @@
 		</div>
 
 		{{#EasySearch.IfInputEmpty index=index }}
-			<div class="padded examples black">For example "Yo Mamma"</div>
+			<div class="padded examples black">For example:</div>
 		{{else}}
 			{{#if resultsCount}}
 				<div class="padded count-results black">{{resultsCount}} results found.</div>
@@ -62,15 +62,15 @@
 			</div>
 				<br>
 			<div>
-				<span class="vote-score red">Laugh Score: {{laughScore}}</span>
+				<span class="vote-score black">address</span>
 			</div>
 				<br>
 			<div>
-				<span class="vote-score yellow">Frown Score: {{frownScore}}</span>
+				<span class="vote-score black">Host</span>
 			</div>
 				<br>
 			<div>
-				<span class="vote-score green">Puke Score: {{pukeScore}}</span>
+				<span class="vote-score black">Evetns</span>
 			</div>
 		</div>
 		{{/if}}

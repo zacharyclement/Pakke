@@ -7,6 +7,23 @@ Template.profile.rendered = function() {
 }
 
 Template.profile.helpers({
+	eventsHosting: function() {
+		var username = Meteor.user().username;
+		var userId = Meteor.userId();
+		var eventsHosting = Events.find({eventHostUserId: userId}, {sort: {createdAt: -1}});
+		return eventsHosting;
+	},
+
+	
+	eventsAttending: function() {
+		var username = Meteor.user().username;
+		var userId = Meteor.userId();
+		
+		var eventsAttending = Events.find({attendees: userId}, {sort: {createdAt: -1}})
+		return eventsAttending;
+
+	},
+	
 	email: function() {
 		if(!Meteor.user()) {
 			Bert.alert("you are not logged in, permission denied", "danger", "growl-top-right");
@@ -23,17 +40,6 @@ Template.profile.helpers({
 		} else {
 			return Meteor.user().username;
 		}
-	}, 
-
-	userEvents: function() {
-		var username = Meteor.user().username;
-		var userId = Meteor.userId();
-		var userEvents = Events.find({userId: userId}, {sort: {createdAt: -1}});
-		return userEvents;
-	},
-
-	userAddress: function() {
-		return Meteor.user().profile.address;
 	},
 
 	userHost: function() {
@@ -51,8 +57,15 @@ Template.profile.helpers({
 
 Template.profile.events({
 	"click #delete-event": function() {
-		console.log(this._id)
 		Meteor.call("removeEvent", this._id);
+		Bert.alert("Your Event Was Deleted", "success", "growl-top-right");
+	},
+	
+	"click #not-attending": function() {
+		var userId = Meteor.userId();
+		var eventId = this._id;
+
+		Meteor.call("removeAttendee", eventId, userId );
 		Bert.alert("Your Event Was Deleted", "success", "growl-top-right");
 	},
 

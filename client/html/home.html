@@ -1,33 +1,38 @@
 <template name="events">
+	<div class="event-map-wrapper">
+		{{#if currentUser}}
 
-	{{#if currentUser}}
-	
-	{{#each events}}
-	<!-- Event -->
-	<div class="event">
-		<div class="row">
-			<div class=".col-sm-6 .col-md-5 .col-lg-6" id="info">
-				<h1 class="event-title">{{eventName}}</h1>
-				<p class="meta">Author: {{author}}</p>
-				<p class="meta">Posted On: {{date}}</p>
-			</div>
-			
-			<div class="row" id="score">
-				<h3 class="count white block">{{address}}</h3>
-				<h3 class="count white block">{{host}}</h3>
-			</div>
+		<div class='map-container'>
+			{{>map}}
 		</div>
 
-		<p class="regular event-desc">"{{eventAddress}}"</p>
+		{{#each events}}
 
+		<!-- Event -->
+		<div class="event">
+			<h1>{{eventName}}</h1>
+			<h3>{{eventAddress}}</h3>			
+			<p>Posted On: {{date}}</p>
+			<p>Host: {{eventHostUserName}}</p>
+			<button class="btn btn-lg btn-success" id="submit-attendee" type="submit">Attend Event</button>
+		</div>
+		<!-- End Event -->
+
+		{{else}}
+		<div class="event">
+			<h1>no events to display</h1>
+		</div>
+		{{/each}} {{else}}
+		
+		<!-- Main landing page if not signed in -->
+		<div class='front-page'>
+			<h1>Pakke</h1>
+			<h3>Always Different. Never the SAme</h3>
+			<button>
+				<a class="" href="/login" id="login-link">Find Events Near You!</a>
+			</button>
+		</div>
+		{{/if}}
 	</div>
-	<!-- End Event -->
-	{{else}}
-	<h1>no events to display</h1>
-	{{/each}}
-	{{else}}
-	<h1>You are not logged in</h1>
-	
-	{{/if}}
 
 </template>

@@ -1,24 +1,15 @@
 html,
 body {
   overflow-x: hidden; /* Prevent scroll on narrow devices */
+  box-sizing: border-box;
 }
 
 body {
-  width: 100%;
-  height: 100%;
   font-family: 'Montserrat', sans-serif;
-  line-height: 1;
-  background-image: url("pattern.png"); 
+  background-image:white;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.block {
-  
-  /*float: left;*/
-    display: inline-block;
+.main-content {
+  background-color: white;
+  padding: 40px 20px;
 }

@@ -1,6 +1,7 @@
 .form-signin {
 	width: 100%;
 	max-width: 500px;
+	padding: 0px 30px 0px 30px;
 }
 
 .form-control {

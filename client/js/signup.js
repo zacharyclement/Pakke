@@ -20,10 +20,7 @@ Template.signup.events({
 				email: email,
 				password: password,
 				profile: {
-					address: 0,
 					host: false,
-					pukeScore: 0,
-					voted: [],
 				}
 			}, function(err){
 				if(err){

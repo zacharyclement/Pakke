@@ -1,0 +1,61 @@
+/* The header */
+.header {
+  background-color: #ffec4f;
+}
+
+.icon {
+  margin: 30px 10px;
+  padding: 0;
+  width: 80px;
+}
+
+.header a.company-logo {
+  margin: 0 0 0 20px;
+  padding: 10px 0px 0px 0px;
+}
+
+.header .header-links {
+  margin: 20px auto;
+  float: right;
+
+}
+
+.header .header-links li {
+  display: inline-block;
+  margin: 0 15px 5px auto;
+  padding: 40px 0;
+  text-align: center;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+.header .header li:hover{
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  /* color: #ffffff; */
+  -webkit-transition: all 0.5s;
+     -moz-transition: all 0.5s;
+       -o-transition: all 0.5s;
+          transition: all 0.5s;
+}
+
+/* Making the sidebar responsive */
+@media (max-width: 900px) {
+
+  .main-content{
+    max-width: none;
+    padding: 40px 20px;
+    margin: 0 0 40px;
+  }
+
+}
+
+/* Mobile phone layout */
+@media (max-width: 450px) {
+
+  .header-left {
+    padding: 20px 0;
+  }
+
+}

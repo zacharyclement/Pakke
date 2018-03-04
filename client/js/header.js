@@ -1,8 +1,8 @@
-Template.sidebar.rendered = function(){
+Template.header.rendered = function(){
 
 }
 
-Template.sidebar.events({
+Template.header.events({
 	"click .logout": function(event){
 		Meteor.logout(function(err){
 			if(err) {
