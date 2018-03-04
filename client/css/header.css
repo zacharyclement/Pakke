@@ -1,10 +1,11 @@
 /* The header */
 .header {
-  background-color: #ffec4f;
+  /* background-color: #ffec4f; */
+  background-color: lightgray;
 }
 
 .icon {
-  margin: 30px 10px;
+  margin: 20px 10px;
   padding: 0;
   width: 80px;
 }
@@ -15,15 +16,13 @@
 }
 
 .header .header-links {
-  margin: 20px auto;
   float: right;
 
 }
 
 .header .header-links li {
   display: inline-block;
-  margin: 0 15px 5px auto;
-  padding: 40px 0;
+  padding: 40px 20px;
   text-align: center;
   color: black;
   font-size: 16px;

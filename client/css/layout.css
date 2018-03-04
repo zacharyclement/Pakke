@@ -1,12 +1,9 @@
 html,
 body {
   box-sizing: border-box;
-}
-
-body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'helvetica';
 }
 
 .main-content {
-  padding: 40px 20px;
+  padding: 10px 10px;
 }
