@@ -18,6 +18,13 @@
 .text {
     grid-area: 1/1/2/-1;
     text-align: center;
+    position: relative;
+    top: 15%;
+    right: 13%;
+}
+
+.text-box h1{
+    
 }
 
 .featured-events {

@@ -1,32 +1,53 @@
 /* The header */
 .header {
   /* background-color: #ffec4f; */
-  background-color: lightgray;
+  background-color: white;
+  border-bottom: 3px solid lightgray;
+}
+
+.header div {
+  display: inline-block;
+}
+
+.left-nav li {
+  display: inline-block;
+  /* border-style: solid;
+  border-width: 1px; */
+}
+
+.left-nav p {
+  position: relative;
+  top: 12px;
 }
 
 .icon {
-  margin: 20px 10px;
-  padding: 0;
-  width: 80px;
+  margin: 0px 40px;
+  width: 90px;
+  position: relative;
+  top: 7px;
+  /* border-style: solid;
+  border-width: 1px; */
 }
 
-.header a.company-logo {
-  margin: 0 0 0 20px;
-  padding: 10px 0px 0px 0px;
-}
-
-.header .header-links {
+.header .header-links-right {
   float: right;
+  transform: translate(-25%, 50%);
+  /* border-style: solid;
+  border-width: 1px; */
+
 
 }
 
-.header .header-links li {
+.header .header-links-right li {
   display: inline-block;
-  padding: 40px 20px;
-  text-align: center;
+  padding: 10px 15px;
   color: black;
   font-size: 16px;
   font-weight: bold;
+  transform: translate(-25%, 25%); 
+  /* border-style: solid;
+  border-width: 1px; */
+
 }
 
 
@@ -52,9 +73,5 @@
 
 /* Mobile phone layout */
 @media (max-width: 450px) {
-
-  .header-left {
-    padding: 20px 0;
-  }
 
 }

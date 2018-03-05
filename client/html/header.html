@@ -1,22 +1,32 @@
 <template name="header">
-	<aside class="header"> 
+	<div class="header">
+		<div class='left-nav'>
+			<ul>
+				<li><a href="/"><img src="logo.jpg" class="icon"></a></li>
+				<li><p>Washington, D.C.</p></li>
+			</ul>
+			
 	
-	<a class="company-logo" href="/"><img src="logo.jpg" class="icon"></a>
-		<div class="header-links">
+			
+		</div>
+		
+		<div class="header-links-right">
 			<ul>
 				{{#if currentUser}}
 				<li><a href="/profile" id="profile-link">Profile</a></li>
 				<li><a href="/search" id="search-link">Search</a></li>
-				{{else}}
-				{{/if}}
 				<li><a href="/events" id="events-link">Events</a></li>
+				{{else}} {{/if}}
 				
+
 				{{#if currentUser}}
 				<li><a class="logout" href="/" id="logout-link">Logout</a></li>
 				{{else}}
+				<li><a href="/login" id="login-link">About</a></li>
 				<li><a href="/login" id="login-link">Login</a></li>
+				<li><a href="/login" id="login-link">Be A Host</a></li>
 				{{/if}}
 			</ul>
 		</div>
-	</aside>
+	</div>
 </template>
